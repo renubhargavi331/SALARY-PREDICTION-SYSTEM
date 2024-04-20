@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Salary Prediction</title>
+
+    <style>
+        body {
+            background: url('../static/salary.jpg') no-repeat center center fixed; /* Set a light blue background color */
+            font-family: Arial, sans-serif; /* Use a common sans-serif font */
+        }
+
+        form {
+            background-color: rgba(52, 152, 219, 0.5); /* Set the background color with 50% opacity */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            margin: 10px auto;
+        }
+
+        label {
+            font-weight: bold; /* Make labels bold */
+            color: #000000; /* Set label text color to white */
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+
+        h1 {
+            font-weight: bold; /* Make the title bold */
+            color: #000000; /* Set title text color to white */
+        }
+
+        h4 {
+            text-size-adjust: bold;
+            color: #000000; /* Set predicted salary text color to white */
+        }
+    </style>
+</head>
+<body>
+    <!-- Loan Prediction Form -->
+    <form action="/predict" method="post">
+        <h1>Loan Approval Prediction</h1>
+
+        <label for="Age">Age:</label>
+        <input type="number" name="Age" id="Age">
+
+
+        <label>job title:</label>
+        <select name="Job_Title">
+            <option value="0">Account Manager</option>
+            <option value="3">Business Analyst</option>
+            <option value="6">CEO</option>
+            <option value="17">Data Analyst</option>
+            <option value="34">Event Coordinator</option>
+            <option value="37">Financial Manager</option>
+            <option value="38">Graphic Designer</option>
+            <option value="40">HR Manager</option>
+            <option value="43">IT Manager</option>
+            <option value="46">Junior Account Manager</option>
+            <option value="81">Marketing Analyst</option>
+            <option value="85">Network Engineer</option>
+            <option value="86">Office Manager</option>
+            <option value="87">Operations Analyst</option>
+            <option value="90">Principal Engineer</option>
+            <option value="98">Recruiter</option>
+            <option value="101">Sales Associate</option>
+            <option value="159">Software Engineer</option>
+            <option value="168">Training Specialist</option>
+            <option value="170">UX Designer</option>
+            <option value="173">Web Developer</option>
+
+        </select><br><br>
+            <!-- Options remain unchanged -->
+        </select>
+
+        <label for="Years_of_Experience">Years of Experience:</label>
+        <input type="number" name="Years_of_Experience" id="Years_of_Experience">
+
+        <label>Gender :</label>
+            <select name="gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+            <label>Education_Level:</label>
+            <select name="Education_Level">
+                <option value="0">Bachelor's</option>
+                <option value="1">Master's</option>
+                <option value="2">PhD</option>
+            </select><br><br>
+
+
+        <input type="submit" class="btn btn-primary" value="Predict">
+    </form>
+
+    <!-- Predicted Salary Section -->
+    <form action="/predict" method="post">
+    <div>
+        <h4>Predicted Salary: {{prediction}}</h4>
+    </div>
+    </form>
+</body>
+</html>

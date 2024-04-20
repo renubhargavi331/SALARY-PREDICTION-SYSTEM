@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Set a light background color */
+            font-family: Arial, sans-serif; /* Use a common sans-serif font */
+        }
+
+        form {
+            background-color: yellow; /* Set the primary color of the form to yellow */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold; /* Make labels bold */
+        }
+
+        h1 {
+            font-weight: bold; /* Make the title bold */
+        }
+
+        /* Bootstrap Header Styling */
+        .navbar {
+            background-color: #007bff;
+            padding: 15px;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bootstrap Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Loan Approval Prediction</a>
+    </nav>
+    <body>
+        <form action="/predict" method="post">
+            <label>Age:</label>
+            <input type="number" name="Age"><br><br>
+    
+            <label>job title:</label>
+            <select name="Job_Title">
+                <option value="0">Account Manager</option>
+                <option value="3">Business Analyst</option>
+                <option value="6">CEO</option>
+                <option value="17">Data Analyst</option>
+                <option value="34">Event Coordinator</option>
+                <option value="37">Financial Manager</option>
+                <option value="38">Graphic Designer</option>
+                <option value="40">HR Manager</option>
+                <option value="43">IT Manager</option>
+                <option value="46">Junior Account Manager</option>
+                <option value="81">Marketing Analyst</option>
+                <option value="85">Network Engineer</option>
+                <option value="86">Office Manager</option>
+                <option value="87">Operations Analyst</option>
+                <option value="90">Principal Engineer</option>
+                <option value="98">Recruiter</option>
+                <option value="101">Sales Associate</option>
+                <option value="159">Software Engineer</option>
+                <option value="168">Training Specialist</option>
+                <option value="170">UX Designer</option>
+                <option value="173">Web Developer</option>
+    
+            </select><br><br>
+    
+            <label>Years_of_Experience :</label>
+            <input type="number" name="Years_of_Experience"><br><br>
+    
+            <label>Gender :</label>
+            <select name="gender">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+            <label>Education_Level:</label>
+            <select name="Education_Level">
+                <option value="0">Bachelor's</option>
+                <option value="1">Master's</option>
+                <option value="2">PhD</option>
+            </select><br><br>
+
+        <form action="/predict" method="post">
+            <!-- Your form elements go here -->
+
+            <input type="submit" class="btn btn-primary" value="Predict">
+        </form>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Predicted Loan Status:</a>
+        </nav>
+        <h4>Enter details for Prediction</h4>
+
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
